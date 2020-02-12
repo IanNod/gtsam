@@ -53,7 +53,7 @@ if(GTSAM_SUPPORT_NESTED_DISSECTION)
 	add_subdirectory(metis)
 endif()
 
-add_subdirectory(ceres)
+include(ceres)
 
 ############ NOTE:  When updating GeographicLib be sure to disable building their examples
 ############        and unit tests by commenting out their lines:
