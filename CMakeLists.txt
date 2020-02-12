@@ -54,7 +54,7 @@ configure_file(
   "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
   IMMEDIATE @ONLY)
 
-add_custom_target(gtsam_uninstall
+add_custom_target(uninstall
   "${CMAKE_COMMAND}" -P "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake")
 
 
@@ -195,7 +195,7 @@ endif()
 
 ###############################################################################
 # Find TBB
-find_package(TBB 4.4 COMPONENTS tbb tbbmalloc)
+find_package(TBB COMPONENTS tbb tbbmalloc)
 
 # Set up variables if we're using TBB
 if(TBB_FOUND AND GTSAM_WITH_TBB)
